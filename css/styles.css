@@ -1,3 +1,4 @@
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -86,12 +87,19 @@ h3 {
     margin-bottom: 3rem !important; /* Consistent space to decorative line */
 }
 
-/* Decorative lines positioning */
+/* Decorative lines positioning - CONSOLIDATED */
 .framework-title::after,
 .decision-making-title::after,
 .risk-optimization-title::after,
 .section-title::after {
-    bottom: -1.5rem !important; /* Consistent decorative line position */
+    content: '';
+    position: absolute;
+    bottom: -1.5rem !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: #b3b385;
 }
 
 /* Content sections after decorative lines */
@@ -99,8 +107,19 @@ h3 {
 .knowledge-content,
 .optimization-content,
 .section-content {
-    margin-top: 3rem !important; /* Consistent space from decorative line to content */
+    margin-top: 1rem !important; /* Reduced space from decorative line to content */
 }
+
+/* Adjust spacing for What We Offer section specifically */
+.knowledge-enhancement .knowledge-content {
+    margin-top: 1.5rem !important; /* Move blue box up to purple line */
+}
+
+/* Adjust spacing for Our Core Technologies section specifically */
+.risk-optimization-section .risk-optimization-content {
+    margin-top: 1rem !important; /* Reduce space between decorative line and content */
+}
+
 
 /* Subsection titles within content areas */
 .knowledge-item-title,
@@ -4159,16 +4178,6 @@ section {
     position: relative;
 }
 
-.risk-optimization-title::after {
-    content: '';
-    position: absolute;
-    bottom: -1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 2px;
-    background-color: #b3b385;
-}
 
 .risk-optimization-content {
     display: grid;
@@ -5694,7 +5703,7 @@ section.service-process .process-timeline .timeline-item .timeline-content p {
 
 .cta-description {
     font-size: 1.1rem;
-    margin-bottom: 1rem;
+    /*! margin-bottom: 1rem; */
     opacity: 0.9;
     color: inherit;
 }
@@ -5807,6 +5816,7 @@ section.service-process .process-timeline .timeline-item .timeline-content p {
 
     .contact-info {
         text-align: inherit;
+        margin-top: -20px;
     }
 
     .form-title,
@@ -5875,6 +5885,10 @@ section.service-process .process-timeline .timeline-item .timeline-content p {
 @media (max-width: 768px) {
     .contact-form-container {
         padding: 30px 1.5rem;
+    }
+
+    .contact-info {
+        margin-top: -20px;
     }
 
     body {
@@ -6220,7 +6234,7 @@ section.service-process .process-timeline .timeline-item .timeline-content p {
     /* Mobile logo in menu - ONLY on mobile */
     @media (max-width: 768px) {
         .mobile-logo-item {
-            margin-top: 2rem !important;
+            margin-top: -0.5rem !important;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             padding: 1.5rem 1.5rem 0 1.5rem !important;
@@ -7001,3 +7015,60 @@ textarea:focus {
 
 
 
+
+/* Remove space below CTA title text */
+.cta .cta-title {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Lower CTA description by 1rem */
+.cta .cta-description {
+    margin-top: 1rem !important;
+}
+
+/* Lower welcome section decorative line by 0.5rem */
+.skeleton-welcome .skeleton-title::after {
+    bottom: -0.5rem !important;
+}
+
+/* Lower Automated Decision-Making Systems decorative line by 0.5rem */
+.decision-making-section .decision-making-title::after {
+    bottom: -2rem !important; /* Original -1.5rem + additional -0.5rem */
+}
+
+/* Lower Personalized Algorithm Implementation Process decorative line by 0.5rem */
+.page-technology .risk-optimization-title::after {
+    bottom: -2rem !important; /* Original -1.5rem + additional -0.5rem */
+}
+
+/* Lower pyramid graphic by 1rem on mobile */
+@media (max-width: 768px) {
+    .pyramid-graphic {
+        margin-top: 1rem !important;
+    }
+}
+
+/* Expand card width and decrease padding for Financial Pattern Recognition section on mobile */
+@media (max-width: 768px) {
+    .page-technology .ml-framework-section .step-card {
+        width: calc(100% - 0.5rem) !important;
+        max-width: 100% !important;
+        margin: 0.25rem auto !important;
+    }
+
+    .page-technology .ml-framework-section .step-content {
+        padding: 1.5rem 1rem 1.5rem 2.25rem !important;
+    }
+
+    .page-technology .ml-framework-section .step-icon-section {
+        width: 60px !important;
+        min-width: 60px !important;
+        flex-shrink: 0 !important;
+        padding-left: 1rem !important;
+    }
+
+    .page-technology .ml-framework-section .step-description {
+        font-size: calc(1rem - 2pt) !important;
+    }
+}
