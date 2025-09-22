@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://paternuspartnersllc.com/sitemap.xml
+
+# Disallow sensitive areas if any
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+
+# Allow crawling of important resources
+Allow: /css/
+Allow: /js/
+Allow: /logos_images/
