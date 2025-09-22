@@ -7072,3 +7072,50 @@ textarea:focus {
         font-size: calc(1rem - 2pt) !important;
     }
 }
+
+/* Add space beneath Contact heading in footer */
+.footer-section:last-child .footer-heading {
+    margin-bottom: 0.75rem !important; /* Increased for desktop */
+}
+
+/* Adjust Contact heading spacing for mobile/tablet to compensate for contact-info negative margin */
+@media (max-width: 1024px) {
+    .footer-section:last-child .footer-heading {
+        margin-bottom: 1.75rem !important; /* Increased for mobile/tablet */
+    }
+}
+
+/* Raise Contact Information title on contact page by 0.5rem */
+.page-contact .faq-category-title:first-of-type {
+    margin-top: -0.5rem !important;
+}
+
+/* Raise decorative line in Ready to Get Started section by 0.75rem */
+.contact-cta-title::after {
+    bottom: 0rem !important;
+}
+
+/* Add 6rem above Initial Consultation Process title */
+.page-contact .faq-category:nth-of-type(2) {
+    margin-top: 6rem !important;
+}
+
+/* Add 6rem above Ready to Get Started box */
+.page-contact .cta-content.contact-cta {
+    margin-top: 6rem !important;
+}
+
+/* Raise footer description by 0.5rem */
+.footer-description {
+    margin-top: -0.5rem !important;
+}
+
+/* Add more spacing between contact info in footer */
+.contact-info p {
+    margin-bottom: 0.5rem !important;
+}
+
+/* Add bottom padding below Call Now button in Ready to Get Started box */
+.page-contact .contact-cta-buttons {
+    padding-bottom: 0.5rem !important;
+}
