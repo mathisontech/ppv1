@@ -77,6 +77,48 @@ h3 {
     margin: 0;
 }
 
+/* ===== STANDARDIZED SECTION SPACING SYSTEM ===== */
+/* Main section titles with decorative lines */
+.framework-title,
+.decision-making-title,
+.risk-optimization-title,
+.section-title {
+    margin-bottom: 3rem !important; /* Consistent space to decorative line */
+}
+
+/* Decorative lines positioning */
+.framework-title::after,
+.decision-making-title::after,
+.risk-optimization-title::after,
+.section-title::after {
+    bottom: -1.5rem !important; /* Consistent decorative line position */
+}
+
+/* Content sections after decorative lines */
+.framework-description,
+.knowledge-content,
+.optimization-content,
+.section-content {
+    margin-top: 3rem !important; /* Consistent space from decorative line to content */
+}
+
+/* Subsection titles within content areas */
+.knowledge-item-title,
+.data-focus-title,
+.step-title,
+.faq-category-title {
+    margin-bottom: 1.5rem !important; /* Consistent subsection spacing */
+}
+
+/* CTA section consistency */
+.cta-title {
+    margin-bottom: 1.5rem !important;
+}
+
+.cta-title::after {
+    bottom: -0.75rem !important;
+}
+
 p {
     font-size: 1rem;
     line-height: 1.7;
