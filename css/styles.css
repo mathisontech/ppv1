@@ -7119,3 +7119,33 @@ textarea:focus {
 .page-contact .contact-cta-buttons {
     padding-bottom: 0.5rem !important;
 }
+
+/* Add decorative lines under Who We Are card titles */
+.page-home .ml-framework-section .step-title {
+    position: relative;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.page-home .ml-framework-section .step-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: #b3b385;
+}
+
+/* Raise body text in Who We Are cards */
+.page-home .ml-framework-section .step-description {
+    margin-top: -0.25rem;
+}
+
+/* Add padding to top and bottom of Who We Are cards */
+.page-home .ml-framework-section .step-content {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2rem !important;
+}
